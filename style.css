@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +21,9 @@ button:active{
     max-width: 1440px;
 }
 
+ul{
+    list-style: none;
+}
 
 /* header */
 
@@ -52,6 +57,8 @@ button:active{
     font-size: 14px;
 }
 
+
+
 /* mobile header */
 .mobile_header_navigation{
     display: none;
@@ -65,6 +72,7 @@ button:active{
     width: 50%;
     height: 100Vh;
     background-color: #FCF5E4;
+
 }
 .mobile_menu_button {
     display: none; 
@@ -93,6 +101,7 @@ button:active{
 }
 .header_nav_mobile_container.active{
     display: flex;
+    
 }
 .header_nav_mobile_container_item_left{
     width: 50%;
@@ -102,13 +111,27 @@ button:active{
     background-color: #fcf5e479;
 }
 .header_nav_mobile_container_item_right{
+    align-items: center;
+    padding-top: 100px;
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
     background-color: #FCF5E4;
+
 }
-@media screen and (max-width: 800px) {
+.header_nav_mobile_container_item_right > ul{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.noline{
+    color: #000000;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 900px) {
     .header_navigation {
         display: none;
     }
@@ -466,6 +489,8 @@ button:active{
         display: flex;
     }
 }
+
+
 .osn6{
     background-color: #FAEEEE;
 }
@@ -523,6 +548,39 @@ button:active{
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@media screen and (max-width:1135px){
+    .osn6_content{
+        flex-flow: column wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .bloks{
+        justify-content: center;
+    }
+    .map{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:700px)
+{
+    .osn6_content{
+        justify-content: center;
+    }
+
+    .bloks{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: auto;
+    }
+    .map{
+        width: 450px ;
+    }
+}
+
+/* селекция подвал */
+
 .polosochka_podval{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -549,4 +607,12 @@ button:active{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+@media screen and (max-width:700px){
+    .podval_contant1{
+        justify-content: center;
+        gap:10px;
+    }
+    
 }
