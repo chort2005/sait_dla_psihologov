@@ -58,6 +58,17 @@ const nextSlide =  async () => {
     await showSlide();
 };
 
+setTimeout(() => {setInterval(() => {
+    hideSlide();
+    removeActivePaginationCircles();
+    currentSlideIndex++;
+    if (currentSlideIndex > slides.length - 1) {
+        currentSlideIndex = 0;
+    }
+    addActivePaginationCircles();
+    showSlide();
+}, 3000)}, 3000);
+
 const prevSlide = async () => {
     await hideSlide();
     await removeActivePaginationCircles();
