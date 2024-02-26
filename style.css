@@ -131,7 +131,7 @@ ul{
     text-decoration: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
     .header_navigation {
         display: none;
     }
@@ -141,7 +141,9 @@ ul{
     .header_phone {
         font-size: 12px;
     }
-
+    .header_nav_mobile{
+        display: flex;
+    }
 }
 
 /* section1 */
@@ -163,7 +165,7 @@ ul{
 }
 .osn1_content{
     display: flex;
-    width: 40%;
+    min-width: 40%;
     height: 100%;
     margin-right: 10px;
     font-size: 20px;
@@ -173,6 +175,10 @@ ul{
     flex-direction: column;
     justify-content: center;
     gap: 50px;
+}
+.zag_text_glav{
+    max-width: 450px;
+    text-align: right;
 }
 .batton2ht{
     display: flex;
@@ -215,6 +221,21 @@ ul{
     background-color: #E00B0B;
     border-color: #E00B0B;
 }
+
+@media screen and (max-width: 1000px) {
+    .osn1_container{
+        justify-content: center;
+    }
+    .osn1_content{
+        font-size: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    .zag_text_glav{
+        text-align: center;
+    }
+}
+
 
 /* 2 селекция */
 
@@ -465,9 +486,6 @@ ul{
     .header_contact_container{
         display: none;
     }
-    .header_nav_mobile{
-        display: flex;
-    }
 
     /* .section_one_title */
     .section_one{
@@ -559,9 +577,8 @@ ul{
     font-size: 15px;
 }
 .map{
-    width: 652px;
-    height: 457px;
-    background-image: url("./img/image\ 12.png");
+    width: 700px;
+    height: 500px;
 }
 .img_bloks{
     width: 70px;
@@ -577,8 +594,12 @@ ul{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-@media screen and (max-width:1135px){
+.map_mobile{
+    display: none;
+    width: 450px;
+    height: 300;
+}
+@media screen and (max-width:1350px){
     .osn6_content{
         flex-flow: column wrap;
         flex-direction: column;
@@ -604,7 +625,13 @@ ul{
         width: auto;
     }
     .map{
-        width: 450px ;
+        display: none;
+    }
+    .map_mobile{
+        display: block;
+        width: 450px;
+        height: 300;
+        margin-bottom: 20px;
     }
 }
 
